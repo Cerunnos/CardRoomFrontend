@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TableTop from './TableTop'
+import './App.css'
 
 class App extends Component {
   render() {
     return (
       <div>
-      Hi There
+        <TableTop/>
       </div>
     );
   }
