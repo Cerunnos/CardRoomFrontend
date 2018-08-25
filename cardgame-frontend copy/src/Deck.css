@@ -1,0 +1,10 @@
+.Deck{
+  position:fixed;
+  left:82%;
+  /* right:40%; */
+  top: 80%;
+  height: 20%;
+  width:8%;
+  border-style:solid;
+  text-align:center;
+}

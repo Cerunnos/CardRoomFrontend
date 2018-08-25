@@ -1,0 +1,10 @@
+.Discard{
+  position:fixed;
+  left:91%;
+  /* right:40%; */
+  top: 80%;
+  height: 20%;
+  width:8%;
+  border-style:solid;
+  text-align:center;
+}

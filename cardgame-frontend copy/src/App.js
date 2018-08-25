@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import TableTop from './TableTop'
-import './App.css'
+import Background from './Background'
+import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <TableTop/>
+      <div className="App">
+        <Background/>
       </div>
     );
   }

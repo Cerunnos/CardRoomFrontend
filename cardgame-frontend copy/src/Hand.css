@@ -1,0 +1,11 @@
+.Hand{
+  position:fixed;
+  left:1%;
+  /* right:40%; */
+  top: 80%;
+  height: 20%;
+  width:80%;
+  border-style:solid;
+  display:flex;
+  overflow-x:scroll;
+}
