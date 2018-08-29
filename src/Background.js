@@ -16,13 +16,16 @@ class Background extends Component {
   }
 
   createDeck=()=>{
-    let deckLength=60
     let newDeck=[]
-    for (let i=0;i<60;i++){
-      let alteredDeck=this.state.deck
-      let powerLevel=(1+Math.floor(Math.random()*6))
-      let cardInfo={number:i,power:powerLevel}
-      newDeck.push(cardInfo)
+    for (let i=0;i<13;i++){
+      let cardSpade={number:i+1,suite:"Spades"}
+      let cardClub={number:i+1,suite:"Clubs"}
+      let cardDiamond={number:i+1,suite:"Diamonds"}
+      let cardHeart={number:i+1,suite:"Hearts"}
+      newDeck.push(cardSpade)
+      newDeck.push(cardClub)
+      newDeck.push(cardDiamond)
+      newDeck.push(cardHeart)
     }
     shuffleDeck(newDeck)
     this.props.dispatch(setDeck(newDeck))
