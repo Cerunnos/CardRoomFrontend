@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Deck from './Deck'
 import Hand from './Hand'
 import Discard from './Discard'
+import LastSix from './LastSix'
 import shuffleDeck from './HelperMethods/ShuffleDeck'
 import './Background.css';
 
@@ -97,6 +98,7 @@ class Background extends Component {
         <Deck drawCard={this.drawCard}/>
         <Discard/>
         <Hand selectCard={this.selectCard}/>
+        <LastSix/>
       </div>
     );
   }

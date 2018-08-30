@@ -1,0 +1,9 @@
+.LastSix{
+  position:fixed;
+  text-align:center;
+  border-style:solid;
+  left:40%;
+  right:40%;
+  top:60%;
+  bottom:30%;
+}
