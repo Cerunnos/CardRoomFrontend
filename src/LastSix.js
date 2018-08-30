@@ -9,8 +9,13 @@ class LastSix extends Component {
   // }
   render() {
     return (
-      <div className="LastSix">
-        Hi There
+      <div className="container">
+        <div className="grid-item">
+        </div>
+        <div className="grid-item">
+        </div>
+        <div className="grid-item">
+        </div>
       </div>
     );
   }
