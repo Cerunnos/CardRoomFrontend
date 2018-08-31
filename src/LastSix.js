@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './LastSix.css';
-// import Card from './Card'
+import Card from './Card'
 import {connect} from 'react-redux'
 
 class LastSix extends Component {
-  // handleClick=()=>{
-  //   console.log("Hand")
-  // }
+  handleClick=()=>{
+    console.log(this.props.store.deck)
+  }
   render() {
     return (
       <div className="container">
-        <div className="grid-item">
+        <div className="grid-item" onClick={this.handleClick}>
         </div>
         <div className="grid-item">
         </div>

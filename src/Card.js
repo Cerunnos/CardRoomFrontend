@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import './Card.css';
+import {setSelectedCard} from './Redux/actions'
+
 
 import {connect} from 'react-redux'
 
 class Card extends Component {
   handleClick=()=>{
-    this.props.selectCard(this.props.card)
+    console.log(this.props.store.selectedCard)
+    this.props.dispatch(setSelectedCard(this.props.card))
   }
   render() {
     return (
