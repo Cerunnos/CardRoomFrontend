@@ -7,7 +7,6 @@ import {connect} from 'react-redux'
 
 class Card extends Component {
   handleClick=()=>{
-    console.log(this.props.store.selectedCard)
     this.props.dispatch(setSelectedCard(this.props.card))
   }
   render() {

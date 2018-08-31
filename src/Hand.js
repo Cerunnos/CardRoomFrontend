@@ -13,7 +13,7 @@ class Hand extends Component {
     let keyCounter=0
     let playerHand=this.props.store.hand.map((card)=>{
       keyCounter++
-      return <Card card={card} selectCard={this.props.selectCard} key={keyCounter}/>
+      return <Card card={card} key={keyCounter}/>
     })
     return (
       <div className="Hand" onClick={this.handleClick}>
