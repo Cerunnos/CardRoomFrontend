@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Card.css';
-import {setSelectedCard} from './Redux/actions'
+import {setSelectedCard, setHand} from './Redux/actions'
 
 
 import {connect} from 'react-redux'
@@ -8,6 +8,14 @@ import {connect} from 'react-redux'
 class Card extends Component {
   handleClick=()=>{
     this.props.dispatch(setSelectedCard(this.props.card))
+    let newHand=[]
+    this.props.store.hand.map((card)=>{
+      if (card.number!==this.props.store.selectedCard.number || card.suite!==this.props.store.selectedCard.suite){
+        newHand.push(card)
+      }
+    })
+    // console.log(newHand)
+    this.props.dispatch(setHand(newHand))
   }
   render() {
     return (

@@ -2,7 +2,7 @@ const defaultState={
   deck:[],
   hand:[],
   discard:[],
-  selectedCard:{}
+  selectedCard:{number:0,suite:"None"}
 }
 
 const rootReducer=(state=defaultState,action)=>{

@@ -62,13 +62,6 @@ class Background extends Component {
     this.props.dispatch(setDeck(newDeck))
   }
 
-  selectCard=(card)=>{
-    this.setState({
-      selectedCard:card
-    },()=>console.log(this.state.selectedCard))
-  }
-
-
   drawCard=()=>{
     let altDeck=this.props.store.deck.map((card)=>{
       return card
@@ -78,7 +71,7 @@ class Background extends Component {
     })
     let topCard=altDeck.shift()
     let handSet=[...altHand,topCard]
-    console.log(handSet)
+    // console.log(handSet)
     this.props.dispatch(setHand(handSet))
     this.props.dispatch(setDeck(altDeck))
   }
