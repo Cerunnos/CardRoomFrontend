@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 import './Hand.css';
-
 import Card from './Card'
-
 import {connect} from 'react-redux'
+import {setHand} from './Redux/actions'
+
 
 class Hand extends Component {
-  // handleClick=()=>{
-  //   console.log("Hand")
-  // }
+  handleClick=()=>{
+    // console.log(this.props.store.selectedCard)
+    let newHand=this.props.store.hand.map((card)=>{
+      return card
+    })
+    if (this.props.store.selectedCard.suite===true){
+      newHand.push(this.props.store.selectedCard)
+      this.props.dispatch(setHand(newHand))
+      console.log(this.props.store.hand)
+    }
+  }
   render() {
     let keyCounter=0
     let playerHand=this.props.store.hand.map((card)=>{

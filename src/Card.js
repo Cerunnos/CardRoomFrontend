@@ -10,11 +10,10 @@ class Card extends Component {
     this.props.dispatch(setSelectedCard(this.props.card))
     let newHand=[]
     this.props.store.hand.map((card)=>{
-      if (card.number!==this.props.store.selectedCard.number || card.suite!==this.props.store.selectedCard.suite){
+      if ((card.number!==this.props.store.selectedCard.number || card.suite!==this.props.store.selectedCard.suite)){
         newHand.push(card)
       }
     })
-    // console.log(newHand)
     this.props.dispatch(setHand(newHand))
   }
   render() {

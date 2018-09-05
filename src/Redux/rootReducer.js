@@ -2,7 +2,8 @@ const defaultState={
   deck:[],
   hand:[],
   discard:[],
-  selectedCard:{number:0,suite:"None"}
+  selectedCard:{},
+  player1LastSix:{pos1:{},pos2:{},pos3:{}}
 }
 
 const rootReducer=(state=defaultState,action)=>{
@@ -13,6 +14,8 @@ const rootReducer=(state=defaultState,action)=>{
       return {...state,hand:action.hand}
     case 'SET_SELECTED_CARD':
       return {...state,selectedCard:action.card}
+    case 'SET_PLAYER_1_LAST_SIX':
+      return {...state,player1LastSix:action.object}
     default:
       return state
   }
