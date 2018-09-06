@@ -16,6 +16,8 @@ const rootReducer=(state=defaultState,action)=>{
       return {...state,selectedCard:action.card}
     case 'SET_PLAYER_1_LAST_SIX':
       return {...state,player1LastSix:action.object}
+    case 'CLEAR_SELECTED_CARD':
+      return {...state,selectedCard:{}}
     default:
       return state
   }

@@ -2,6 +2,8 @@ export const SET_DECK = 'SET_DECK'
 export const SET_HAND = 'SET_HAND'
 export const SET_SELECTED_CARD = 'SET_SELECTED_CARD'
 export const SET_PLAYER_1_LAST_SIX = 'SET_PLAYER_1_LAST_SIX'
+export const CLEAR_SELECTED_CARD = 'CLEAR_SELECTED_CARD'
+
 
 export function setDeck(deck){
   return {type: SET_DECK, deck}
@@ -13,6 +15,10 @@ export function setHand(hand){
 
 export function setSelectedCard(card){
   return {type: SET_SELECTED_CARD, card}
+}
+
+export function clearSelectedCard(){
+  return {type: CLEAR_SELECTED_CARD}
 }
 
 export function setPlayer1LastSix(object){
